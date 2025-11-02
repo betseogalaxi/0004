@@ -26,13 +26,30 @@
       background-position: center;
     }
 
-    @media (max-width: 768px) {
-  #hero {
-    height: 60vh;
+<style>
+  :root {
+    --darkbg: #1B345D;
+    --darkbg-alt: #293043;
+    --boxbg: #343B4D;
+    --primary: #B8EE72;
+    --highlight: #F3FFB5;
+    --secondary-text: #93CA53;
   }
-}
 
-  </style>
+  .parallax {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Disable parallax scrolling on mobile */
+  @media (max-width: 768px) {
+    .parallax {
+      background-attachment: scroll;
+      background-position: top;
+    }
+  }
+</style>
 </head>
 
 <body class="bg-[var(--darkbg)] text-white font-sans antialiased">
